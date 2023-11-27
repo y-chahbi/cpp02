@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 11:10:35 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/11/27 17:55:59 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/11/27 22:25:11 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,5 @@ Fixed::~Fixed()
 std::ostream & operator << (std::ostream &out, const Fixed &c)
 {
     out << c.toInt();
-    out << "sdfdsfds" << std::endl;
     return out;
 }

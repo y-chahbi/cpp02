@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 11:10:26 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/11/27 17:47:26 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/11/27 22:25:17 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,20 +28,12 @@ class Fixed
         Fixed& operator=(const Fixed& Copy);
         void    setRawBits(int const raw);
         int     getRawBits(void) const;
-        std::ostream& operator<<(std::ostream& output) const;
         float   toFloat( void ) const;
         int     toInt( void ) const;
 
         ~Fixed();
 };
 
-// std::ostream& Fixed::operator<<(std::ostream& output) const{
-//     output << Raw;
-//     return (output);
-// }
-// std::ostream& operator << (std::ostream& output, const Fixed& obj)
-// {
-//     return obj.operator<<(output);
-// }
+std::ostream & operator << (std::ostream &out, const Fixed &c);
 
 #endif
