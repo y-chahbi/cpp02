@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 11:10:35 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/14 10:40:50 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/15 00:10:24 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ Fixed::Fixed()
 Fixed::Fixed(int const integer)
 {
     std::cout << "Int constructor called" << std::endl;
-    Raw = integer;
+    Raw = integer * 256;
 }
 
 Fixed::Fixed(float const floatingPoint)
 {
     std::cout << "Float constructor called" << std::endl;
-    Raw = floatingPoint;
+    Raw = (floatingPoint * 256);
 }
 
 int    Fixed::getRawBits(void) const
@@ -52,13 +52,12 @@ Fixed& Fixed::operator=(const Fixed& Copy)
 
 int Fixed::toInt() const
 {
-    return ((int)Raw);
+    return (Raw / 256);
 }
 
 float Fixed::toFloat() const
 {
-
-    return (0);
+    return (float) (Raw / 256);
 }
 
 Fixed::Fixed(const Fixed& Copy)
