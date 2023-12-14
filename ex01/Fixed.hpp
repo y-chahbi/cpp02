@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 11:10:26 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/08 11:24:02 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/14 10:40:54 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Fixed
 {
     private:
         int         Raw;
-        static  const int i;
+        static  const int i = 8;
     public:
         Fixed();
         Fixed(int const integer);

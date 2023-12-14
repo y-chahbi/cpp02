@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 11:10:35 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/08 22:09:29 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/14 10:40:50 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ Fixed::Fixed(const Fixed& Copy)
 
 std::ostream & operator << (std::ostream &out, const Fixed &c)
 {
-    out << c.toInt() + 10000;
+    out << c.toInt();
     return out;
 }
 
