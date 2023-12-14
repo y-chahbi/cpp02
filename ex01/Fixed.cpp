@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 11:10:35 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/15 00:14:36 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/15 00:18:48 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ Fixed& Fixed::operator=(const Fixed& Copy)
     this->Raw = Copy.getRawBits();
     return *this;
 }
+
 
 int Fixed::toInt() const
 {
