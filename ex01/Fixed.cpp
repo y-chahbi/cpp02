@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 11:10:35 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/15 00:26:58 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/15 10:03:19 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Fixed::Fixed(int const integer)
 Fixed::Fixed(float const floatingPoint)
 {
     std::cout << "Float constructor called" << std::endl;
-    Raw = (floatingPoint * 256);
+    Raw = roundf(floatingPoint * 256);
 }
 
 
@@ -59,18 +59,20 @@ int Fixed::toInt() const
 
 float Fixed::toFloat() const
 {
-    return (float) (Raw / 256);
+    return (float) Raw / 256;
 }
 
 Fixed::Fixed(const Fixed& Copy)
 {
     std::cout << "Copy constructor called" << std::endl;
-    setRawBits(Copy.getRawBits());
+    // setRawBits(Copy.getRawBits());
+    *this = Copy;
+    
 }
 
 std::ostream & operator << (std::ostream &out, const Fixed &c)
 {
-    out << c.toInt();
+    out << c.toFloat();
     return out;
 }
 
