@@ -6,27 +6,23 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 10:04:08 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/15 16:58:59 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/17 10:52:21 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "Point.hpp"
+
+void    test(const Point cp)
+{
+    cp.get_x();
+}
 
 int main( void )
 {
-    Fixed a;
-    Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-
-    std::cout << a << std::endl;
-    std::cout << ++a << std::endl;
-    std::cout << a << std::endl;
-    std::cout << a++ << std::endl;
-    std::cout << a << std::endl;
-
-    std::cout << b << std::endl;
-
-    std::cout << Fixed::max( a, b ) << std::endl;
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
+    Point const a(10, 2);
+    Point const b(3,2);
+    Point const c(3, 13);
+    Point const d(4, 3);
+    std::cout << bsp(a, b, c, d) << std::endl;
     return 0;
 }

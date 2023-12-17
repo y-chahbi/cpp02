@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 10:03:43 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/15 16:57:38 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/16 21:32:17 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ Fixed::Fixed(float const floatingPoint)
 
 int    Fixed::getRawBits(void) const
 {
-    //std::cout << "getRawBits member function called" << std::endl;
     return (Raw);
 }
 

@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 10:03:55 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/15 16:56:29 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/17 09:40:24 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 #define FIXED_HPP
 
 #include <iostream>
-#include <cmath>
-#include <iomanip>
+
 
 class Fixed
 {
