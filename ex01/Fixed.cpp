@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 11:10:35 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/15 10:03:19 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/16 12:56:18 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ Fixed::Fixed(const Fixed& Copy)
     std::cout << "Copy constructor called" << std::endl;
     // setRawBits(Copy.getRawBits());
     *this = Copy;
-    
 }
 
 std::ostream & operator << (std::ostream &out, const Fixed &c)

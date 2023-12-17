@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 10:03:43 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/15 16:57:38 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/16 20:52:14 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -160,14 +160,28 @@ int Fixed::operator!=(const Fixed& Cpp) const
     return (0);
 }
 
-Fixed Fixed::max(Fixed& cd, const Fixed cdd)
+Fixed Fixed::max(Fixed& cd,  Fixed& cdd)
 {
     if (cd.toFloat() >= cdd.toFloat())
         return (cd);
     return (cdd);
 }
 
-Fixed Fixed::min(Fixed& cd, const Fixed cdd)
+Fixed Fixed::min(Fixed& cd, Fixed& cdd)
+{
+    if (cd.toFloat() <= cdd.toFloat())
+        return (cd);
+    return (cdd);
+}
+
+Fixed Fixed::max(const Fixed cd,  const Fixed cdd)
+{
+    if (cd.toFloat() >= cdd.toFloat())
+        return (cd);
+    return (cdd);
+}
+
+Fixed Fixed::min(const Fixed cd, const Fixed cdd)
 {
     if (cd.toFloat() <= cdd.toFloat())
         return (cd);
