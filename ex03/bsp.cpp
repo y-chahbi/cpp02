@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 17:51:24 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/17 11:19:32 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/17 11:21:30 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ bool bsp( Point const a, Point const b, Point const c, Point const point)
     float total_areas = a_area + b_area + c_area;
     if (origenal_area == total_areas && a_area && b_area && c_area)
         return (1);
+    
     return (0);
 }
