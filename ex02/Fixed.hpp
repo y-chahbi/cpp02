@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 10:03:55 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/16 20:52:04 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/21 11:29:18 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,12 @@ class Fixed
         Fixed& operator++();
         Fixed& operator--(int);
         Fixed& operator--();
-        int operator>(const Fixed& Cpp) const;
-        int operator<(const Fixed& Cpp) const;
-        int operator>=(const Fixed& Cpp) const;
-        int operator<=(const Fixed& Cpp) const;
-        int operator==(const Fixed& Cpp) const;
-        int operator!=(const Fixed& Cpp) const;
+        bool operator>(const Fixed& Cpp) const;
+        bool operator<(const Fixed& Cpp) const;
+        bool operator>=(const Fixed& Cpp) const;
+        bool operator<=(const Fixed& Cpp) const;
+        bool operator==(const Fixed& Cpp) const;
+        bool operator!=(const Fixed& Cpp) const;
         Fixed& operator*(const Fixed& Cpp) const;
         Fixed& operator+(const Fixed& Cpp) const;
         Fixed& operator-(const Fixed& Cpp) const;

@@ -6,7 +6,7 @@
 #    By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/08 09:23:16 by ychahbi           #+#    #+#              #
-#    Updated: 2023/12/15 00:31:42 by ychahbi          ###   ########.fr        #
+#    Updated: 2023/12/20 16:00:15 by ychahbi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ all: $(SUBJ)
 $(SUBJ): $(OBJ_ALL)
 	$(CC) $(FLAGS) $^ -o $@
 
-%.o: %.c Fixed.hpp
+%.o: %.cpp Fixed.hpp
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:

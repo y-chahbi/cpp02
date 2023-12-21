@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 10:06:14 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/11/27 12:53:57 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/21 09:59:54 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ Fixed::Fixed(const Fixed& Copy)
 {
     std::cout << "Copy constructor called" << std::endl;
     setRawBits(Copy.getRawBits());
-    //Raw = Copy.Raw;
 }
 
 Fixed::~Fixed()

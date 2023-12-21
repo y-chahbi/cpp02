@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 10:03:43 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/16 20:52:14 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/21 11:28:56 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,46 +118,34 @@ Fixed& Fixed::operator/(const Fixed& Cpp) const
     return (*tmp);
 }
 
-int Fixed::operator>(const Fixed& Cpp) const
+bool Fixed::operator>(const Fixed& Cpp) const
 {
-    if (this->toFloat() > Cpp.toFloat())
-        return (1);
-    return (0);
+    return (this->toFloat() > Cpp.toFloat());
 }
 
-int Fixed::operator<(const Fixed& Cpp) const
+bool Fixed::operator<(const Fixed& Cpp) const
 {
-    if (this->toFloat() < Cpp.toFloat())
-        return (1);
-    return (0);
+    return (this->toFloat() < Cpp.toFloat());
 }
 
-int Fixed::operator>=(const Fixed& Cpp) const
+bool Fixed::operator>=(const Fixed& Cpp) const
 {
-    if (this->toFloat() >= Cpp.toFloat())
-        return (1);
-    return (0);
+    return (this->toFloat() >= Cpp.toFloat());
 }
 
-int Fixed::operator<=(const Fixed& Cpp) const
+bool Fixed::operator<=(const Fixed& Cpp) const
 {
-    if (this->toFloat() <= Cpp.toFloat())
-        return (1);
-    return (0);
+    return (this->toFloat() <= Cpp.toFloat());
 }
 
-int Fixed::operator==(const Fixed& Cpp) const
+bool Fixed::operator==(const Fixed& Cpp) const
 {
-    if (this->toFloat() == Cpp.toFloat())
-        return (1);
-    return (0);
+    return (this->toFloat() == Cpp.toFloat());
 }
 
-int Fixed::operator!=(const Fixed& Cpp) const
+bool Fixed::operator!=(const Fixed& Cpp) const
 {
-    if (this->toFloat() != Cpp.toFloat())
-        return (1);
-    return (0);
+    return (this->toFloat() != Cpp.toFloat());
 }
 
 Fixed Fixed::max(Fixed& cd,  Fixed& cdd)

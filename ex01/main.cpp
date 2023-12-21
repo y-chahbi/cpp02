@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 11:10:42 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/14 23:46:05 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/21 10:43:47 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main( void ) {
     Fixed const d( b );
 
     a = Fixed( 1234.4321f );
-    
+
     std::cout << "a is " << a << std::endl;
     std::cout << "b is " << b << std::endl;
     std::cout << "c is " << c << std::endl;

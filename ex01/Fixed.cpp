@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 11:10:35 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/16 12:56:18 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/21 10:04:00 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,18 @@ Fixed::Fixed()
 Fixed::Fixed(int const integer)
 {
     std::cout << "Int constructor called" << std::endl;
-    Raw = integer * 256;
+    Raw = integer * std::pow(2, i);
 }
 
 Fixed::Fixed(float const floatingPoint)
 {
     std::cout << "Float constructor called" << std::endl;
-    Raw = roundf(floatingPoint * 256);
+    Raw = roundf(floatingPoint * std::pow(2, i));
 }
 
 
 int    Fixed::getRawBits(void) const
 {
-    //std::cout << "getRawBits member function called" << std::endl;
     return (Raw);
 }
 
@@ -54,18 +53,17 @@ Fixed& Fixed::operator=(const Fixed& Copy)
 
 int Fixed::toInt() const
 {
-    return (Raw / 256);
+    return (Raw / std::pow(2, i));
 }
 
 float Fixed::toFloat() const
 {
-    return (float) Raw / 256;
+    return Raw / std::pow(2, i);
 }
 
 Fixed::Fixed(const Fixed& Copy)
 {
     std::cout << "Copy constructor called" << std::endl;
-    // setRawBits(Copy.getRawBits());
     *this = Copy;
 }
 
