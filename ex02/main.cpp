@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 10:04:08 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/21 10:37:45 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/27 14:18:36 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,5 @@ int main( void )
     std::cout << b << std::endl;
 
     std::cout << Fixed::max( a, b ) << std::endl;
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
     return 0;
 }

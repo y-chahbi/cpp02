@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 11:10:42 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/21 10:43:47 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/24 14:06:22 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 int main( void ) {
     Fixed       a;
-    Fixed const b( 10 );
+    Fixed const b( 2000 );
+    std::cout << b.toFloat() << std::endl;
+    std::cout << b.toInt() << std::endl;
     Fixed const c( 42.42f );
     Fixed const d( b );
 
@@ -32,3 +34,4 @@ int main( void ) {
 
     return (0);
 }
+

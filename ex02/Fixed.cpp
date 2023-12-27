@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 10:03:43 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/21 11:28:56 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/27 14:47:18 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,17 @@ Fixed::Fixed()
 
 Fixed::Fixed(int const integer)
 {
-    Raw = integer * 256;
+    Raw = integer * std::pow(2, i);
 }
 
 Fixed::Fixed(float const floatingPoint)
 {
-    Raw = roundf(floatingPoint * 256);
+    Raw = roundf(floatingPoint * std::pow(2, i));
 }
 
 
 int    Fixed::getRawBits(void) const
 {
-    //std::cout << "getRawBits member function called" << std::endl;
     return (Raw);
 }
 
@@ -75,46 +74,41 @@ Fixed& Fixed::operator--()
 
 int Fixed::toInt() const
 {
-    return (Raw / 256);
+    return (Raw / std::pow(2, i));
 }
 
 float Fixed::toFloat() const
 {
-    return (float) Raw / 256;
+    return Raw / std::pow(2, i);
 }
 
 Fixed::Fixed(const Fixed& Copy)
 {
-    // setRawBits(Copy.getRawBits());
     *this = Copy;
     
 }
 
 Fixed& Fixed::operator*(const Fixed& Cpp) const
 {
-    Fixed *tmp = new Fixed(*this);
-    *tmp = this->toFloat() * Cpp.toFloat();
+    Fixed *tmp = new Fixed(this->toFloat() * Cpp.toFloat());
     return (*tmp);
 }
 
 Fixed& Fixed::operator+(const Fixed& Cpp) const
 {
-    Fixed *tmp = new Fixed(*this);
-    *tmp = this->toFloat() + Cpp.toFloat();
+    Fixed *tmp = new Fixed(this->toFloat() + Cpp.toFloat());
     return (*tmp);
 }
 
 Fixed& Fixed::operator-(const Fixed& Cpp) const
 {
-    Fixed *tmp = new Fixed(*this);
-    *tmp = this->toFloat() - Cpp.toFloat();
+    Fixed *tmp = new Fixed(this->toFloat() - Cpp.toFloat());
     return (*tmp);
 }
 
 Fixed& Fixed::operator/(const Fixed& Cpp) const
 {
-    Fixed *tmp = new Fixed(*this);
-    *tmp = this->toFloat() / Cpp.toFloat();
+    Fixed *tmp = new Fixed(this->toFloat() / Cpp.toFloat());
     return (*tmp);
 }
 
@@ -148,30 +142,30 @@ bool Fixed::operator!=(const Fixed& Cpp) const
     return (this->toFloat() != Cpp.toFloat());
 }
 
-Fixed Fixed::max(Fixed& cd,  Fixed& cdd)
+Fixed &Fixed::max(Fixed& cd,  Fixed& cdd)
 {
-    if (cd.toFloat() >= cdd.toFloat())
+    if (cd > cdd)
         return (cd);
     return (cdd);
 }
 
-Fixed Fixed::min(Fixed& cd, Fixed& cdd)
+Fixed &Fixed::min(Fixed& cd, Fixed& cdd)
 {
-    if (cd.toFloat() <= cdd.toFloat())
+    if (cd < cdd)
         return (cd);
     return (cdd);
 }
 
-Fixed Fixed::max(const Fixed cd,  const Fixed cdd)
+const Fixed &Fixed::max(const Fixed &cd,  const Fixed &cdd)
 {
-    if (cd.toFloat() >= cdd.toFloat())
+    if (cd > cdd)
         return (cd);
     return (cdd);
 }
 
-Fixed Fixed::min(const Fixed cd, const Fixed cdd)
+const Fixed &Fixed::min(const Fixed &cd, const Fixed &cdd)
 {
-    if (cd.toFloat() <= cdd.toFloat())
+    if (cd < cdd)
         return (cd);
     return (cdd);
 }

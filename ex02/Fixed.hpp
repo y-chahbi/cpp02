@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 10:03:55 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/21 11:29:18 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/27 14:47:28 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ class Fixed
         Fixed(int const integer);
         Fixed(float const floatingPoint);
         Fixed(const Fixed& Copy);
-        static Fixed max(Fixed& cd, Fixed& cdd);
-        static Fixed min(Fixed& cd, Fixed& cdd);
-        static Fixed max(const Fixed cd, const Fixed cdd);
-        static Fixed min(const Fixed cd, const Fixed cdd);
+        static Fixed &max(Fixed& cd, Fixed& cdd);
+        static Fixed &min(Fixed& cd, Fixed& cdd);
+        static const Fixed &max(const Fixed &cd, const Fixed &cdd);
+        static const Fixed &min(const Fixed &cd, const Fixed &cdd);
         Fixed& operator=(const Fixed& Copy);
         Fixed& operator++(int);
         Fixed& operator++();
